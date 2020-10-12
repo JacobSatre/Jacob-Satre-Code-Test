@@ -1,0 +1,87 @@
+@font-face {
+font-family: Roboto-Regular;
+src: url(../fonts/Roboto-Regular.ttf);
+}
+
+body > .container {position:relative;}
+.floating-box {
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    height:auto;
+    top:20vh;
+    width:100%;
+    border-radius:10px;
+    overflow:hidden;
+    -webkit-box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1);
+    background-color:white;
+}
+.bar-header {
+    background-color:#222; 
+    color:white; 
+    text-align:center; 
+    padding:1em; 
+    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.4);
+    box-shadow: 0 2px 10px rgba(0,0,0,.4);
+}
+
+.bar-header h1 {
+    margin:0px;
+    line-height:1;
+    font-family:Roboto-Regular;
+    text-transform:uppercase;
+}
+.bar-content {height:100%; padding:2em;}
+.bar-content h2 {margin-top:0px;font-family:Roboto-Regular;}
+.bar-content textarea {
+    height:100%; 
+    padding:5px; 
+    width:100%;
+    resize: none; 
+    min-height: 150px;
+    max-height:300px;
+}
+.bar-content #error-element {
+    margin-top:10px;
+    margin-bottom:0px; 
+    max-height:80px; 
+    overflow: auto; 
+    padding:5px 5px 20px;
+}
+.bar-content #output-element {
+    margin-bottom:0px; 
+    background-color:#ffe67e; 
+    color:#222; 
+    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.4); 
+    box-shadow: 0 2px 10px rgba(0,0,0,.4); 
+    padding:5px;
+    height: 100%;
+    overflow: auto;
+    min-height: 150px;
+    max-height:300px;
+}
+.bar-content #error-element:empty {display:none;}
+.bar-content #output-element:empty {visibility:hidden;}
+.bar-footer .btn {background-color:#222; border-color:#222; color:white; outline:0px; border-radius: 0px;}
+.bar-footer .btn:hover,.bar-footer .btn:active, .bar-footer .btn:active:focus {background-color:#000; border-color:#000; color:white; outline:0px;}
+.input-section {display:flex; flex-direction:column; border-right:1px solid #eee;}
+.output-section {display:flex; flex-direction:column;}
+@media (min-width:768px) {
+    body {background-color:#8177b3;}
+    .flex-md {display:flex; height:100%;}
+}
+@media (max-width:767px) {
+    .container {width:100%; padding:0px;}
+    .input-section {border-right:0px;}
+    .bar-content hr {border-color:#eee;}
+    .floating-box {
+        display: block;
+        position:relative;
+        height:auto;
+        top:0px;
+        width:100%;
+        border-radius:0px;
+        background-color:white;
+    }
+}

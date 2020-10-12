@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jacob Satre Code Test</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="container">
+		<div class="floating-box">
+			<div class="bar-header">
+				<h1>Jacob Satre<br><span class="h3">code test</span></h1>
+			</div>
+			<div class="bar-content">
+				<div class="row flex-md">
+					<div class="col-sm-6 input-section">
+						<h2 class="text-center">Input</h2>
+						<textarea id="input-element" placeholder="quantity name at price"></textarea>
+						<p class="text-danger" id="error-element"></p>
+					</div>
+					<div class="visible-xs"><hr></div>
+					<div class="col-sm-6 output-section">
+						<h2 class="text-center">Output</h2>
+						<p id="output-element"></p>
+					</div>
+				</div>
+			</div>
+			<div class="bar-footer">
+				<button class="btn btn-block btn-cta btn-lg" id="submit-element">Generate Recipt</button>
+			</div>
+
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/logic.js"></script>
+<script>
+document.getElementById("submit-element").addEventListener("click", function(e){
+    e.preventDefault;
+    generateRecipt();
+});
+</script>
+</body>
+</html>
